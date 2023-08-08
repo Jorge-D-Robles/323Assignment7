@@ -28,4 +28,4 @@ function updateBrowserInfo() {
 updateBrowserInfo();
 
 // Call the function whenever the window is resized
-window.addEventListener("resize", updateBrowserInfo);
+window.onresize = updateBrowserInfo;
