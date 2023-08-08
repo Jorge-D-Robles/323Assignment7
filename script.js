@@ -1,4 +1,5 @@
-document.getElementById("browser-info").innerHTML =
+function updateBrowserInfo() {
+  document.getElementById("browser-info").innerHTML =
     "<strong>Navigator:</strong><br>" +
     "appName: " + navigator.appName + "<br>" +
     "product: " + navigator.product + "<br>" +
@@ -21,3 +22,10 @@ document.getElementById("browser-info").innerHTML =
     "hostname: " + window.location.hostname + "<br>" +
     "pathname: " + window.location.pathname + "<br>" +
     "protocol: " + window.location.protocol;
+}
+
+// Call the function when the page loads
+updateBrowserInfo();
+
+// Call the function whenever the window is resized
+window.addEventListener("resize", updateBrowserInfo);
